@@ -4,18 +4,12 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { signOut, useSession } from 'next-auth/react'
-import { Button } from '../Elements/Button'
 import { Fragment } from 'react'
 
-const navigation = [
-  { name: 'Studio', href: '/studio' },
-  { name: 'FAQ', href: '/faq' },
-]
+const navigation = [{ name: 'FAQ', href: '/faq' }]
 
 const Navbar = () => {
   const router = useRouter()
-  const { data: session } = useSession()
 
   return (
     <Disclosure as="nav" className="border-b-2 border-zinc-800 bg-zinc-900">
@@ -80,75 +74,60 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {!session && (
-                  <Link href={'/api/auth/signin'} passHref>
-                    <Button className="mx-auto">Login</Button>
-                  </Link>
-                )}
-
-                {session && (
-                  <Menu as="div" className="relative ml-3">
-                    <div>
-                      <Menu.Button className="flex rounded-full bg-gradient-to-br from-flamingo via-purple-500 to-dodger-blue ring-2 ring-slate-200 ring-offset-2 ring-offset-slate-800">
-                        <span className="sr-only">Open user menu</span>
-                        <div className="flex h-8 w-8 items-center justify-center rounded-full font-semibold uppercase">
-                          <p>{session?.user?.email?.substring(0, 2)}</p>
-                        </div>
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded bg-zinc-700 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={clsx(
-                                active ? 'bg-zinc-600' : '',
-                                'block px-4 py-2 text-sm',
-                              )}
-                            >
-                              Profile
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={clsx(
-                                active ? 'bg-zinc-600' : '',
-                                'block px-4 py-2 text-sm ',
-                              )}
-                            >
-                              Einstellungen
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <p
-                              className={clsx(
-                                active ? 'bg-zinc-600' : '',
-                                'block cursor-pointer px-4 py-2 text-sm ',
-                              )}
-                              onClick={() => signOut({ callbackUrl: '/' })}
-                            >
-                              Sign out
-                            </p>
-                          )}
-                        </Menu.Item>
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
-                )}
+                <Menu as="div" className="relative ml-3">
+                  <div>
+                    <Menu.Button className="relative flex h-8 w-8 overflow-hidden rounded-full ring-2 ring-slate-200 ring-offset-2 ring-offset-slate-800">
+                      <span className="sr-only">Open user menu</span>
+                      <img
+                        src={
+                          router.locale === 'de'
+                            ? require('@/assets/i18n/Flag_of_Germany.svg')
+                                .default.src
+                            : require('@/assets/i18n/Square_Flag_of_the_United_Kingdom.svg')
+                                .default.src
+                        }
+                        className="h-full w-full"
+                        alt="Flag DE"
+                      />
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 mt-4 origin-top-right py-1 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            href={'/'}
+                            locale={router.locale === 'de' ? 'en' : 'de'}
+                            passHref
+                          >
+                            <div className="relative flex h-8 w-8 overflow-hidden rounded-full ring-2 ring-slate-200 ring-offset-2 ring-offset-slate-800">
+                              <span className="sr-only">Open user menu</span>
+                              <img
+                                src={
+                                  router.locale === 'en'
+                                    ? require('@/assets/i18n/Flag_of_Germany.svg')
+                                        .default.src
+                                    : require('@/assets/i18n/Square_Flag_of_the_United_Kingdom.svg')
+                                        .default.src
+                                }
+                                className="h-full w-full"
+                                alt="Flag DE"
+                              />
+                            </div>
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
               </div>
             </div>
           </div>

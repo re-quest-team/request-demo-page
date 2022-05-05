@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  images: {
-    domains: [
-      `${process.env.S3_UPLOAD_BUCKET}.s3.amazonaws.com`,
-      `${process.env.S3_UPLOAD_BUCKET}.s3.${process.env.S3_UPLOAD_REGION}.amazonaws.com`,
-    ],
+  i18n: {
+    // These are all the locales you want to support in
+    // your application
+    locales: ['de', 'en'],
+    // This is the default locale you want to be used when visiting
+    // a non-locale prefixed path e.g. `/hello`
+    defaultLocale: 'de',
   },
 }

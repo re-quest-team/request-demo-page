@@ -12,96 +12,169 @@ import {
   SearchIcon,
 } from '@heroicons/react/outline'
 import FeatureCard from '@/components/Card'
+import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+
+const i18n = {
+  de: {
+    title: 'Digitale Abenteuer für Bildungs&shy;einrich&shy;tungen',
+    subtitle:
+      'ist eine Plattform zum Erstellen von digitalen Escape Games für Bildungseinrichtungen',
+    create: 're:quest erstellen',
+    notWorking: 'Das funktioniert leider noch nicht',
+    features: {
+      adventures: {
+        title: 'Spannende Abenteuer',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      digitalEducation: {
+        title: 'Digitale Bildung',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      modular: {
+        title: 'Modulare Rätsel',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      configure: {
+        title: 'Frei Konfigurierbar',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      noInstall: {
+        title: 'Keine Installation',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      pyhsicalInteraction: {
+        title: 'Physische Elemente',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+    },
+  },
+  en: {
+    title: 'Digital Escape Games for Educational Institutions',
+    subtitle:
+      'is a platform for creating digital Escape Games for educational institutions',
+    create: 'Create re:quest',
+    notWorking: 'Unfortunately this does not work yet',
+    features: {
+      adventures: {
+        title: 'Exciting adventures',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      digitalEducation: {
+        title: 'Digital education',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      modular: {
+        title: 'Modular quests',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      configure: {
+        title: 'Freely configurable',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      noInstall: {
+        title: 'No installation',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+      pyhsicalInteraction: {
+        title: 'Integrate real world elements',
+        description:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+      },
+    },
+  },
+}
 
 const Home: NextPage = () => {
+  const router = useRouter()
+  const [lang, setLang] = useState<'de' | 'en'>('de')
+
+  useEffect(() => {
+    if (router.locale === 'de') setLang('de')
+    if (router.locale === 'en') setLang('en')
+  }, [router.locale])
+
   return (
     <div>
       <div className="mx-auto md:max-w-3xl">
-        <h1 className="bg-gradient-to-br from-flamingo-600 via-dodger-blue-500 to-emerald-600 bg-clip-text p-2 text-center text-6xl font-bold text-transparent">
-          Digitale Abenteuer für Bildungs&shy;einrich&shy;tungen
-        </h1>
+        <h1
+          className="bg-gradient-to-br from-flamingo-600 via-dodger-blue-500 to-emerald-600 bg-clip-text p-2 text-center text-6xl font-bold text-transparent"
+          dangerouslySetInnerHTML={{ __html: i18n[lang].title }}
+        ></h1>
         <Spacer />
         <h2 className="p-2 text-center text-2xl">
-          <span className="font-bold">re:quest</span> ist eine Plattform zum
-          Erstellen von digitalen Escape Games für Bildungs&shy;einrichtungen
+          <span className="font-bold">re:quest</span> {i18n[lang].subtitle}
         </h2>
         <Spacer />
-        <Link href={'/studio'} passHref>
-          <Button
-            endIcon={<ArrowRightIcon className="h-4" />}
-            className="mx-auto"
-          >
-            re:quest erstellen
-          </Button>
-        </Link>
+        <Button
+          endIcon={<ArrowRightIcon className="h-4" />}
+          className="umami--click--create-request-button mx-auto"
+          onClick={() => toast(i18n[lang].notWorking)}
+        >
+          {i18n[lang].create}
+        </Button>
         <Spacer />
       </div>
       <div className="flex flex-wrap">
         <FeatureCard
-          title="Spannende Abenteuer"
+          title={i18n[lang].features.adventures.title}
           color="bg-red-400"
           icon={SearchIcon}
+          umamiTag="adventures-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.adventures.description}</>
         </FeatureCard>
         <FeatureCard
-          title="Digitale Bildung"
+          title={i18n[lang].features.digitalEducation.title}
           color="bg-blue-400"
           icon={AcademicCapIcon}
+          umamiTag="digitalEducation-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.digitalEducation.description}</>
         </FeatureCard>
         <FeatureCard
-          title="Modulare Rätsel"
+          title={i18n[lang].features.modular.title}
           color="bg-purple-400"
           icon={CollectionIcon}
+          umamiTag="modular-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.modular.description}</>
         </FeatureCard>
         <FeatureCard
-          title="Frei konfigurierbar"
+          title={i18n[lang].features.configure.title}
           color="bg-pink-400"
           icon={AdjustmentsIcon}
+          umamiTag="configure-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.configure.description}</>
         </FeatureCard>
         <FeatureCard
-          title="Keine Installation"
+          title={i18n[lang].features.noInstall.title}
           color="bg-orange-400"
           icon={DeviceMobileIcon}
+          umamiTag="noInstall-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.noInstall.description}</>
         </FeatureCard>
         <FeatureCard
-          title="Physische Elemente"
+          title={i18n[lang].features.pyhsicalInteraction.title}
           color="bg-green-400"
           icon={PuzzleIcon}
+          umamiTag="pyhsicalInteraction-feature"
         >
-          <>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </>
+          <>{i18n[lang].features.pyhsicalInteraction.description}</>
         </FeatureCard>
       </div>
       <Spacer />
