@@ -14,7 +14,8 @@ import {
 import FeatureCard from '@/components/Card'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const i18n = {
   de: {
@@ -101,6 +102,14 @@ const Home: NextPage = () => {
   const router = useRouter()
   const [lang, setLang] = useState<'de' | 'en'>('de')
 
+  const [anim, setAnim] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnim(true)
+    }, 500)
+  }, [])
+
   useEffect(() => {
     if (router.locale === 'de') setLang('de')
     if (router.locale === 'en') setLang('en')
@@ -186,6 +195,104 @@ const Home: NextPage = () => {
           Weitere Informationen
         </Button>
       </Link>
+      <Spacer size="xl" />
+      <h2 className="p-2 text-center text-4xl font-bold">
+        Interaktiver Editor
+      </h2>
+      <Spacer size="lg" />
+      <div className="flex flex-wrap items-center">
+        <div className="flex-1 basis-full lg:basis-1/2">
+          <p className="lg:mr-4">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor
+            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+            ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
+        </div>
+
+        <div className="w-full flex-1 basis-full rotate-1 p-4 lg:basis-1/2 xl:translate-x-12 2xl:w-[120%] 2xl:translate-x-24">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-lg shadow-zinc-500 ">
+            <div className="bg-zinc-200 p-2">
+              <p className="rounded-full bg-zinc-300 py-1 text-center text-sm text-black md:mx-20">
+                re:quest Studio
+              </p>
+            </div>
+            <img
+              className="px-8"
+              src={require('@/assets/studio.png').default.src}
+            />
+          </div>
+        </div>
+      </div>
+      <Spacer size="xl" />
+      <h2 className="p-2 text-center text-4xl font-bold">
+        Individueller Inhalt
+      </h2>
+      <Spacer size="lg" />
+      <div className="flex flex-wrap items-center">
+        <div className="w-full flex-1 -rotate-1 p-4 xl:-translate-x-12 2xl:w-[120%] 2xl:-translate-x-24">
+          <div className=" overflow-hidden rounded-2xl border border-zinc-200 shadow-lg shadow-zinc-500 ">
+            <div className="bg-zinc-200 p-2">
+              <p className="mx-20 rounded-full bg-zinc-300 py-1 text-center text-sm text-black">
+                re:quest Studio
+              </p>
+            </div>
+            <img
+              className="px-8"
+              src={require('@/assets/studio.png').default.src}
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor
+            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+            ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
+        </div>
+      </div>
+      <Spacer size="xl" />
+      <h2 className="p-2 text-center text-4xl font-bold">
+        Bist Du interessiert?
+      </h2>
+      <Spacer size="xl" />
+      Fragebogen
+      <Spacer size="xl" />
+      Hier
+      <Spacer size="xl" />
+      <Spacer size="xl" />
+      <Spacer size="xl" />
+      <Spacer size="xl" />
+      <Spacer size="xl" />
+      <div className="text-center">
+        <h2 className="p-2 text-center  font-bold">Powered by</h2>
+        <div className="umami--click--reedu-image-link relative mx-auto h-72 w-72 cursor-pointer transition-all hover:scale-105">
+          <Link href={'https://reedu.de'} passHref>
+            <Image
+              src={require('@/assets/reedu.svg')}
+              layout="fill"
+              alt="reedu"
+            />
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

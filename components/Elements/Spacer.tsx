@@ -1,10 +1,11 @@
 import * as React from 'react'
 
 const sizes = {
-  xs: 'my-2',
-  sm: 'my-4',
-  md: 'my-8',
-  lg: 'my-16',
+  xs: 'h-2',
+  sm: 'h-4',
+  md: 'h-8',
+  lg: 'h-16',
+  xl: 'h-32',
 }
 
 export type SpacerProps = {
