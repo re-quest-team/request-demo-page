@@ -187,7 +187,7 @@ const Home: NextPage = () => {
         </FeatureCard>
       </div>
       <Spacer />
-      <Link href={'/faq'} passHref>
+      <Link href={'/faq'} passHref locale={lang}>
         <Button
           endIcon={<ArrowRightIcon className="h-4" />}
           className="mx-auto"

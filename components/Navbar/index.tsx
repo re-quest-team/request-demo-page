@@ -30,7 +30,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href={'/'} passHref>
+                  <Link href={'/'} passHref locale={router.locale}>
                     <a>
                       <div className="relative block h-8 w-20 lg:hidden">
                         <Image
@@ -52,7 +52,11 @@ const Navbar = () => {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map(item => (
-                      <Link key={item.name} href={item.href}>
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        locale={router.locale}
+                      >
                         <a
                           className={clsx(
                             router.pathname.includes(item.href)
@@ -104,7 +108,7 @@ const Navbar = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href={'/'}
+                            href={router.pathname}
                             locale={router.locale === 'de' ? 'en' : 'de'}
                             passHref
                           >
