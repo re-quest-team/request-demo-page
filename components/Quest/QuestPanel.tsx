@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { DraggableProvided, DraggableStateSnapshot } from 'react-beautiful-dnd'
 import { SelectOption } from '../Elements/Select'
 import { SelectField } from '../Elements/Select/SelectField'
-import FileUpload from '../FileUpload'
 import Panel from '../Panel'
 import QuestImagePlacer from './QuestImagePlacer'
 
@@ -49,12 +48,6 @@ const QuestPanel = ({ provided, snapshot, index }: Props) => {
             <QuestImagePlacer
               img={require('@/assets/rooms/dark-museum.jpg').default.src}
             />
-          )}
-          {room.value === 'Eigenes Foto hochladen' && (
-            <>
-              <FileUpload onChange={url => setImageUrl(url)} />
-              {imageUrl && <QuestImagePlacer img={imageUrl} />}
-            </>
           )}
         </div>
       </>
