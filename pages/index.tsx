@@ -219,7 +219,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-full flex-1 basis-full rotate-1 p-4 lg:basis-1/2 xl:translate-x-12 2xl:w-[120%] 2xl:translate-x-24">
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 shadow-lg shadow-zinc-500 ">
+          <div className="overflow-hidden rounded-2xl  shadow-lg shadow-zinc-500 ">
             <div className="bg-zinc-200 p-2">
               <p className="rounded-full bg-zinc-300 py-1 text-center text-sm text-black md:mx-20">
                 re:quest Studio
@@ -239,7 +239,7 @@ const Home: NextPage = () => {
       <Spacer size="lg" />
       <div className="flex flex-wrap items-center">
         <div className="w-full flex-1 -rotate-1 p-4 xl:-translate-x-12 2xl:w-[120%] 2xl:-translate-x-24">
-          <div className=" overflow-hidden rounded-2xl border border-zinc-200 shadow-lg shadow-zinc-500 ">
+          <div className=" overflow-hidden rounded-2xl shadow-lg shadow-zinc-500 ">
             <div className="bg-zinc-200 p-2">
               <p className="mx-20 rounded-full bg-zinc-300 py-1 text-center text-sm text-black">
                 re:quest Studio
