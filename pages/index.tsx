@@ -16,6 +16,7 @@ import toast from 'react-hot-toast'
 import { useRouter } from 'next/router'
 import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const i18n = {
   de: {
@@ -117,6 +118,35 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>
+          re:quest - Digitale Escape Games für Bildungseinrichtungen
+        </title>
+        <meta
+          name="description"
+          content="Erstelle Digitale Escape Games für Deine Bildungseinrichtung und vermittle spielerisch Inhalte"
+        />
+        <meta
+          property="og:title"
+          content="re:quest - Digitale Escape Games für Bildungseinrichtungen"
+        />
+        <meta
+          property="og:description"
+          content="Erstelle Digitale Escape Games für Deine Bildungseinrichtung und vermittle spielerisch Inhalte"
+        />
+        <meta
+          property="og:image"
+          content={require('@/assets/logos/request-logo.svg').default.src}
+        />
+        <meta property="og:url" content="https://request.reedu.de/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="re:quest" />
+        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="keywords"
+          content="escape, game, room, digitale, bildung, museum"
+        />
+      </Head>
       <div className="mx-auto md:max-w-3xl">
         <h1
           className="bg-gradient-to-br from-flamingo-600 via-dodger-blue-500 to-emerald-600 bg-clip-text p-2 text-center text-6xl font-bold text-transparent"
