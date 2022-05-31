@@ -17,6 +17,7 @@ import { useRouter } from 'next/router'
 import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
+import JotformEmbed from 'react-jotform-embed'
 
 const i18n = {
   de: {
@@ -249,7 +250,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-full flex-1 basis-full rotate-1 p-4 lg:basis-1/2 xl:translate-x-12 2xl:w-[120%] 2xl:translate-x-24">
-          <div className="overflow-hidden rounded-2xl  shadow-lg shadow-zinc-500 ">
+          <div className="overflow-hidden rounded-2xl border-2 border-zinc-200">
             <div className="bg-zinc-200 p-2">
               <p className="rounded-full bg-zinc-300 py-1 text-center text-sm text-black md:mx-20">
                 re:quest Studio
@@ -268,20 +269,20 @@ const Home: NextPage = () => {
       </h2>
       <Spacer size="lg" />
       <div className="flex flex-wrap items-center">
-        <div className="w-full flex-1 -rotate-1 p-4 xl:-translate-x-12 2xl:w-[120%] 2xl:-translate-x-24">
-          <div className=" overflow-hidden rounded-2xl shadow-lg shadow-zinc-500 ">
+        <div className="w-full flex-1 basis-full -rotate-1 p-4 lg:basis-1/2 xl:-translate-x-12 2xl:w-[120%] 2xl:-translate-x-24">
+          <div className="overflow-hidden rounded-2xl border-2 border-zinc-200">
             <div className="bg-zinc-200 p-2">
               <p className="mx-20 rounded-full bg-zinc-300 py-1 text-center text-sm text-black">
                 re:quest Studio
               </p>
             </div>
             <img
-              className="px-8"
-              src={require('@/assets/studio.png').default.src}
+              // className="px-8"
+              src={require('@/assets/quest-2.png').default.src}
             />
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 basis-full lg:basis-1/2">
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -303,13 +304,13 @@ const Home: NextPage = () => {
         Bist Du interessiert?
       </h2>
       <Spacer size="xl" />
-      Fragebogen
-      <Spacer size="xl" />
-      Hier
-      <Spacer size="xl" />
-      <Spacer size="xl" />
-      <Spacer size="xl" />
-      <Spacer size="xl" />
+      <p>
+        Möchten Sie auf dem Laufenden gehalten werden und eventuell zu wenigen
+        Museen gehören, mit denen wir interessante Beispiele für unsere
+        re:quests erstellen? Als Dankeschön bieten wir eine kostenlose
+        sechsmonatige Lizenz für 100 Besucher an.
+      </p>
+      <JotformEmbed src="https://form.jotformeu.com/221502755387054" />
       <Spacer size="xl" />
       <div className="text-center">
         <h2 className="p-2 text-center  font-bold">Powered by</h2>
