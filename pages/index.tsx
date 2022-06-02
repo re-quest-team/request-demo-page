@@ -426,7 +426,11 @@ const Home: NextPage = () => {
       </h2>
       <Spacer size="xl" />
       <p>{i18n[lang].stayTuned}</p>
-      <JotformEmbed src="https://form.jotformeu.com/221502755387054" />
+      {lang === 'de' ? (
+        <JotformEmbed src="https://form.jotformeu.com/221502755387054" />
+      ) : (
+        <JotformEmbed src="https://form.jotform.com/221522956013348" />
+      )}
       <Spacer size="xl" />
       <div className="text-center">
         <h2 className="p-2 text-center  font-bold">Powered by</h2>
