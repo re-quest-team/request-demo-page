@@ -26,37 +26,115 @@ const i18n = {
       'ist eine Plattform zum Erstellen von digitalen Escape Games für Bildungseinrichtungen',
     create: 're:quest erstellen',
     notWorking: 'Das funktioniert leider noch nicht',
+    moreInformation: 'Weitere Informationen',
+    interested: 'Bist Du interessiert?',
+    stayTuned:
+      'Möchten Sie auf dem Laufenden gehalten werden und eventuell zu wenigen Museen gehören, mit denen wir interessante Beispiele für unsere re:quests erstellen? Als Dankeschön bieten wir eine kostenlose sechsmonatige Lizenz für 100 Besucher an.',
     features: {
       adventures: {
-        title: 'Spannende Abenteuer',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Young Visitor Engagement',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Anziehung junges Publikums in einem eigenen Format
+            </li>
+            <li className="m-2">
+              das Museum als spannendes Freizeitort attraktiv machen
+            </li>
+            <li className="m-2">
+              clevere Spiele für Einzelpersonen und Gruppen/Familien
+            </li>
+          </ul>
+        ),
       },
       digitalEducation: {
-        title: 'Digitale Bildung',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Storytelling mit Rätseln',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Ein einfaches und handliches Werkzeug für Museumspädagogen
+            </li>
+            <li className="m-2">keine besondere Infrastruktur</li>
+            <li className="m-2">
+              keine Geräte: Besucher verwenden ihre eigene
+            </li>
+            <li className="m-2">
+              schnelle Entwicklung neuer Angebote zu aktuellen Themen
+            </li>
+            <li className="m-2">frei konfigurierbare Rätsel</li>
+          </ul>
+        ),
       },
       modular: {
-        title: 'Modulare Rätsel',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Digitale Einbindung von Museumsinhalten',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Erschließung des Potenzials von Museumsräumen und -objekten
+            </li>
+            <li className="m-2">
+              Automatische Verbindung zu digitalen Sammlungen
+            </li>
+            <li className="m-2">
+              Auf KI basierende Verfahren zur Auswahl geeigneter Hilfsmittel und
+              Inhalte
+            </li>
+            <li className="m-2">
+              Automatische Verbindung mit Sozialen Netzwerken
+            </li>
+          </ul>
+        ),
       },
       configure: {
-        title: 'Frei Konfigurierbar',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Escape Games',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Spannende Rätsel während der abenteuerliche Reise durch Museum
+            </li>
+            <li className="m-2">
+              Anwendung und Entwicklung digitaler Fertigkeiten mit sozialen
+              Medien, Datenerfassung, Programmierung und vielem mehr…
+            </li>
+          </ul>
+        ),
       },
       noInstall: {
-        title: 'Keine Installation',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Einfaches Vorgehen',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              bring your own device: Nutzung eigener (bekannte, passende) Geräte
+            </li>
+            <li className="m-2">keine Installation</li>
+            <li className="m-2">keine Vorkenntnisse</li>
+          </ul>
+        ),
       },
       pyhsicalInteraction: {
-        title: 'Physische Elemente',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Förderung digitaler Skills',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">vielfältige Rätsel</li>
+            <li className="m-2">Recherche in Sozialen Netzwerken</li>
+            <li className="m-2">Erfassung von Sensordaten</li>
+            <li className="m-2">Visuelles Programmieren</li>
+            <li className="m-2">Kryptographie</li>
+          </ul>
+        ),
       },
+    },
+    editor: {
+      title: 'Interaktiver Editor',
+      description: `Mit dem re:quest Studie können Museen thematisch an ihren individuellen Inhalten und Orten orientierte digitale Escape Games erstellen und diese Kindern und Jugendlichen bereitstellen. Dabei können nicht nur virtuelle Rätsel, sondern auch reale Elemente wie z.B. Bilder oder Exponate oder Webinhalte aus sozialen Netzwerken mit einbezogen werden. Die digitalen Escape Games lassen sich dadurch frei und interaktiv gestalten.
+Das re:quest Studio kann von Ausstellungsplaner:innen, Medienpädagog:innen oder Content-Creatorn der Institution genutzt werden - ein Content Creation und Individualisierungs-Service, um die eigenen re:quest in die die Corporate Identity der Einrichtung einzubinden wird individuell angeboten.
+`,
+    },
+    content: {
+      title: 'Individueller Inhalt',
+      description: `Escape Games als spannende Rätselspiele für Gruppen sind in den letzten Jahren immer beliebter geworden. Durch eine individuelle Abenteuergeschichte und kniffligen Aufgaben entsteht ein Nervenkitzel. Mit re:quest wird es nun möglich eigene Escape Games mit individueller Story zu entwickeln.
+Das Besondere: re:quest richtet sich primär an Bildungseinrichtungen, um die eigenen Bildungsinhalte spielerisch zu vermitteln und gleichzeitig digitale Skills zu fördern. Dadurch soll digitale Bildung an außerschulischen Lernorten wie Museen, Bibliotheken oder Schülerlaboren gestärkt werden.
+Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche profitieren von den re:quests. Neben spannenden Abenteuern und kniffligen Rätseln stärken verschiedene Aufgaben wie Datenanalyse, Kryptographie, Datenschutz- und Privacy-rätsel, Programmieren oder Medienanalyse die sogenannten 21st Century Skills.`,
     },
   },
   en: {
@@ -65,37 +143,106 @@ const i18n = {
       'is a platform for creating digital Escape Games for educational institutions',
     create: 'Create re:quest',
     notWorking: 'Unfortunately this does not work yet',
+    moreInformation: 'More information',
+    interested: 'Are you interested?',
+    stayTuned:
+      'Would you like to be kept up to date and possibly be among a few museums with whom we create interesting examples for our re:quests? As a thank you, we offer a free six-month license for 100 visitors.',
     features: {
       adventures: {
-        title: 'Exciting adventures',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Young Visitor Engagement',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">Attract young audiences in a unique format</li>
+            <li className="m-2">make the museum an exciting leisure venue</li>
+            <li className="m-2">
+              clever games for individuals and groups/families
+            </li>
+          </ul>
+        ),
       },
       digitalEducation: {
-        title: 'Digital education',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Storytelling with Riddles',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              A simple and handy tool for museum educators
+            </li>
+            <li className="m-2">no special infrastructure necessary</li>
+            <li className="m-2">no equipment: visitors use their own device</li>
+            <li className="m-2">
+              rapid development of new modules on current topics
+            </li>
+            <li className="m-2">freely configurable puzzles</li>
+          </ul>
+        ),
       },
       modular: {
-        title: 'Modular quests',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Digital integration of museum content',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Unlocking the potential of museum spaces and objects
+            </li>
+            <li className="m-2">Automatic connection to digital collections</li>
+            <li className="m-2">
+              AI-based processes for selecting appropriate tools and content
+            </li>
+            <li className="m-2">connection with social networks</li>
+          </ul>
+        ),
       },
       configure: {
-        title: 'Freely configurable',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Escape Games',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              Exciting riddles during your adventurous journey through the
+              museum
+            </li>
+            <li className="m-2">
+              Application and development of digital skills with social media,
+              data collection, programming, cryptography and many more...
+            </li>
+          </ul>
+        ),
       },
       noInstall: {
-        title: 'No installation',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Simplicity first',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">
+              bring your own device: Use your own (known and suitable) devices
+            </li>
+            <li className="m-2">no installation necessary</li>
+            <li className="m-2">no previous knowledge necessary</li>
+          </ul>
+        ),
       },
       pyhsicalInteraction: {
-        title: 'Integrate real world elements',
-        description:
-          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        title: 'Fostering digital skills',
+        description: (
+          <ul className="list-disc">
+            <li className="m-2">diverse riddles</li>
+            <li className="m-2">research in social networks</li>
+            <li className="m-2">acquisition of sensor data</li>
+            <li className="m-2">visual programming</li>
+            <li className="m-2">Cryptography</li>
+          </ul>
+        ),
       },
+    },
+    content: {
+      title: 'Individual content',
+      description: `Escape games as exciting puzzle games for groups have become more and more popular in recent years. An individual adventure story and tricky tasks create a thrill. With re:quest it is now possible to develop your own Escape Games with an individual story.
+The special feature: re:quest is primarily aimed at educational institutions in order to convey their own educational content in a playful way and to promote digital skills at the same time. This is intended to strengthen digital education at extracurricular learning venues such as museums, libraries or student laboratories.
+Not only educational institutions, but especially children and young people benefit from the re:quests. In addition to exciting adventures and tricky puzzles, various tasks such as data analysis, cryptography, data protection and privacy puzzles, programming or media analysis strengthen the so-called 21st Century Skills.
+`,
+    },
+    editor: {
+      title: 'Interactive editor',
+      description: `With the re:quest studio, museums can create digital escape games thematically oriented to their individual content and locations and make them available to children and young people. Not only virtual puzzles but also real elements such as pictures or exhibits or web content from social networks can be included. The digital Escape Games can thus be designed freely and interactively.
+The re:quest studio can be used by exhibition planners, media educators or content creators of the institution - a content creation and individualization service to integrate the own re:quest into the corporate identity of the institution is offered individually.
+`,
     },
   },
 }
@@ -223,30 +370,17 @@ const Home: NextPage = () => {
           endIcon={<ArrowRightIcon className="h-4" />}
           className="mx-auto"
         >
-          Weitere Informationen
+          {i18n[lang].moreInformation}
         </Button>
       </Link>
       <Spacer size="xl" />
       <h2 className="p-2 text-center text-4xl font-bold">
-        Interaktiver Editor
+        {i18n[lang].editor.title}
       </h2>
       <Spacer size="lg" />
       <div className="flex flex-wrap items-center">
         <div className="flex-1 basis-full lg:basis-1/2">
-          <p className="lg:mr-4">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor
-            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-            ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          </p>
+          <p className="lg:mr-4">{i18n[lang].editor.description}</p>
         </div>
 
         <div className="w-full flex-1 basis-full rotate-1 p-4 lg:basis-1/2 xl:translate-x-12 2xl:w-[120%] 2xl:translate-x-24">
@@ -265,7 +399,7 @@ const Home: NextPage = () => {
       </div>
       <Spacer size="xl" />
       <h2 className="p-2 text-center text-4xl font-bold">
-        Individueller Inhalt
+        {i18n[lang].content.title}
       </h2>
       <Spacer size="lg" />
       <div className="flex flex-wrap items-center">
@@ -283,33 +417,15 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex-1 basis-full lg:basis-1/2">
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor
-            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-            ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          </p>
+          <p>{i18n[lang].content.description}</p>
         </div>
       </div>
       <Spacer size="xl" />
       <h2 className="p-2 text-center text-4xl font-bold">
-        Bist Du interessiert?
+        {i18n[lang].interested}
       </h2>
       <Spacer size="xl" />
-      <p>
-        Möchten Sie auf dem Laufenden gehalten werden und eventuell zu wenigen
-        Museen gehören, mit denen wir interessante Beispiele für unsere
-        re:quests erstellen? Als Dankeschön bieten wir eine kostenlose
-        sechsmonatige Lizenz für 100 Besucher an.
-      </p>
+      <p>{i18n[lang].stayTuned}</p>
       <JotformEmbed src="https://form.jotformeu.com/221502755387054" />
       <Spacer size="xl" />
       <div className="text-center">
