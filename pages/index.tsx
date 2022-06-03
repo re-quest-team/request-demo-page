@@ -104,7 +104,7 @@ const i18n = {
         description: (
           <ul className="list-disc">
             <li className="m-2">
-              bring your own device: Nutzung eigener (bekannte, passende) Geräte
+              Bring Your Own Device: Nutzung eigener (bekannte, passende) Geräte
             </li>
             <li className="m-2">keine Installation</li>
             <li className="m-2">keine Vorkenntnisse</li>
@@ -126,15 +126,43 @@ const i18n = {
     },
     editor: {
       title: 'Interaktiver Editor',
-      description: `Mit dem re:quest Studie können Museen thematisch an ihren individuellen Inhalten und Orten orientierte digitale Escape Games erstellen und diese Kindern und Jugendlichen bereitstellen. Dabei können nicht nur virtuelle Rätsel, sondern auch reale Elemente wie z.B. Bilder oder Exponate oder Webinhalte aus sozialen Netzwerken mit einbezogen werden. Die digitalen Escape Games lassen sich dadurch frei und interaktiv gestalten.
-Das re:quest Studio kann von Ausstellungsplaner:innen, Medienpädagog:innen oder Content-Creatorn der Institution genutzt werden - ein Content Creation und Individualisierungs-Service, um die eigenen re:quest in die die Corporate Identity der Einrichtung einzubinden wird individuell angeboten.
-`,
+      description: (
+        <span>
+          Mit dem <b>re:quest</b> Studio können Museen thematisch an ihren
+          individuellen Inhalten und Orten orientierte digitale Escape Games
+          erstellen und diese Kindern und Jugendlichen bereitstellen. Dabei
+          können nicht nur virtuelle Rätsel, sondern auch reale Elemente wie
+          z.B. Bilder oder Exponate oder Webinhalte aus sozialen Netzwerken mit
+          einbezogen werden. Die digitalen Escape Games lassen sich dadurch frei
+          und interaktiv gestalten. Das <b>re:quest</b> Studio kann von
+          Ausstellungsplaner:innen, Medienpädagog:innen oder Content-Creatorn
+          der Institution genutzt werden - ein Content Creation und
+          Individualisierungs-Service, um die eigenen <b>re:quest</b> in die die
+          Corporate Identity der Einrichtung einzubinden wird individuell
+          angeboten.
+        </span>
+      ),
     },
     content: {
       title: 'Individueller Inhalt',
-      description: `Escape Games als spannende Rätselspiele für Gruppen sind in den letzten Jahren immer beliebter geworden. Durch eine individuelle Abenteuergeschichte und kniffligen Aufgaben entsteht ein Nervenkitzel. Mit re:quest wird es nun möglich eigene Escape Games mit individueller Story zu entwickeln.
-Das Besondere: re:quest richtet sich primär an Bildungseinrichtungen, um die eigenen Bildungsinhalte spielerisch zu vermitteln und gleichzeitig digitale Skills zu fördern. Dadurch soll digitale Bildung an außerschulischen Lernorten wie Museen, Bibliotheken oder Schülerlaboren gestärkt werden.
-Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche profitieren von den re:quests. Neben spannenden Abenteuern und kniffligen Rätseln stärken verschiedene Aufgaben wie Datenanalyse, Kryptographie, Datenschutz- und Privacy-rätsel, Programmieren oder Medienanalyse die sogenannten 21st Century Skills.`,
+      description: (
+        <span>
+          Escape Games als spannende Rätselspiele für Gruppen sind in den
+          letzten Jahren immer beliebter geworden. Durch eine individuelle
+          Abenteuergeschichte und kniffligen Aufgaben entsteht ein Nervenkitzel.
+          Mit <b>re:quest</b> wird es nun möglich eigene Escape Games mit
+          individueller Story zu entwickeln. Das Besondere: <b>re:quest</b>{' '}
+          richtet sich primär an Bildungseinrichtungen, um die eigenen
+          Bildungsinhalte spielerisch zu vermitteln und gleichzeitig digitale
+          Skills zu fördern. Dadurch soll digitale Bildung an außerschulischen
+          Lernorten wie Museen, Bibliotheken oder Schülerlaboren gestärkt
+          werden. Nicht nur die Bildungseinrichtungen, sondern besonders Kinder
+          und Jugendliche profitieren von den <b>re:quests</b>. Neben spannenden
+          Abenteuern und kniffligen Rätseln stärken verschiedene Aufgaben wie
+          Datenanalyse, Kryptographie, Datenschutz- und Privacy-rätsel,
+          Programmieren oder Medienanalyse die sogenannten 21st Century Skills.
+        </span>
+      ),
     },
   },
   en: {
