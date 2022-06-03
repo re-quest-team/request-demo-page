@@ -152,10 +152,10 @@ Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche pr
         title: 'Young Visitor Engagement',
         description: (
           <ul className="list-disc">
-            <li className="m-2">Attract young audiences in a unique format</li>
+            <li className="m-2">attract young audiences in a unique format</li>
             <li className="m-2">make the museum an exciting leisure venue</li>
             <li className="m-2">
-              clever games for individuals and groups/families
+              create clever games for individuals and groups/families
             </li>
           </ul>
         ),
@@ -165,10 +165,12 @@ Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche pr
         description: (
           <ul className="list-disc">
             <li className="m-2">
-              A simple and handy tool for museum educators
+              a simple and handy tool for museum educators
             </li>
             <li className="m-2">no special infrastructure necessary</li>
-            <li className="m-2">no equipment: visitors use their own device</li>
+            <li className="m-2">
+              no equipment: visitors use their own devices
+            </li>
             <li className="m-2">
               rapid development of new modules on current topics
             </li>
@@ -177,15 +179,15 @@ Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche pr
         ),
       },
       modular: {
-        title: 'Digital integration of museum content',
+        title: 'Digital Integration of Museum Content',
         description: (
           <ul className="list-disc">
             <li className="m-2">
-              Unlocking the potential of museum spaces and objects
+              unlocking the potential of museum spaces and objects
             </li>
-            <li className="m-2">Automatic connection to digital collections</li>
+            <li className="m-2">automatic connection to digital collections</li>
             <li className="m-2">
-              AI-based processes for selecting appropriate tools and content
+              AI-based methods for selecting appropriate tools and content
             </li>
             <li className="m-2">connection with social networks</li>
           </ul>
@@ -196,53 +198,79 @@ Nicht nur die Bildungseinrichtungen, sondern besonders Kinder und Jugendliche pr
         description: (
           <ul className="list-disc">
             <li className="m-2">
-              Exciting riddles during your adventurous journey through the
+              exciting riddles during your adventurous journey through the
               museum
             </li>
             <li className="m-2">
-              Application and development of digital skills with social media,
-              data collection, programming, cryptography and many more...
+              application and development of digital skills while using social
+              media, collecting data, coding, encrypting, etc.
             </li>
           </ul>
         ),
       },
       noInstall: {
-        title: 'Simplicity first',
+        title: 'Simplicity First',
         description: (
           <ul className="list-disc">
             <li className="m-2">
-              bring your own device: Use your own (known and suitable) devices
+              Bring Your Own Device: usage of personal (known and suitable)
+              devices
             </li>
-            <li className="m-2">no installation necessary</li>
+            <li className="m-2">no app installation required</li>
             <li className="m-2">no previous knowledge necessary</li>
           </ul>
         ),
       },
       pyhsicalInteraction: {
-        title: 'Fostering digital skills',
+        title: 'Fostering Digital Skills',
         description: (
           <ul className="list-disc">
             <li className="m-2">diverse riddles</li>
             <li className="m-2">research in social networks</li>
             <li className="m-2">acquisition of sensor data</li>
-            <li className="m-2">visual programming</li>
-            <li className="m-2">Cryptography</li>
+            <li className="m-2">visual programing</li>
+            <li className="m-2">cryptography</li>
           </ul>
         ),
       },
     },
     content: {
-      title: 'Individual content',
-      description: `Escape games as exciting puzzle games for groups have become more and more popular in recent years. An individual adventure story and tricky tasks create a thrill. With re:quest it is now possible to develop your own Escape Games with an individual story.
-The special feature: re:quest is primarily aimed at educational institutions in order to convey their own educational content in a playful way and to promote digital skills at the same time. This is intended to strengthen digital education at extracurricular learning venues such as museums, libraries or student laboratories.
-Not only educational institutions, but especially children and young people benefit from the re:quests. In addition to exciting adventures and tricky puzzles, various tasks such as data analysis, cryptography, data protection and privacy puzzles, programming or media analysis strengthen the so-called 21st Century Skills.
-`,
+      title: 'Individual Content',
+      description: (
+        <span>
+          Escape games as exciting puzzle games for groups have become more and
+          more popular in recent years. An individual adventure story and tricky
+          tasks create a thrill. Thanks to <b>re:quest</b> it is now possible to
+          develop your own Escape Games with an individual story. The special
+          feature: <b>re:quest</b> is primarily aimed at educational
+          institutions in order to convey their own educational content in a
+          playful way and to promote digital skills at the same time. This is
+          intended to strengthen digital education at extracurricular learning
+          venues such as museums, libraries and student laboratories. Not only
+          educational institutions, but especially children and young people
+          benefit from <b>re:quests</b>. In addition to exciting adventures and
+          tricky puzzles, various tasks such as data analysis, cryptography,
+          data protection and privacy puzzles, programming or media analysis
+          strengthen the so-called 21st Century Skills.
+        </span>
+      ),
     },
     editor: {
-      title: 'Interactive editor',
-      description: `With the re:quest studio, museums can create digital escape games thematically oriented to their individual content and locations and make them available to children and young people. Not only virtual puzzles but also real elements such as pictures or exhibits or web content from social networks can be included. The digital Escape Games can thus be designed freely and interactively.
-The re:quest studio can be used by exhibition planners, media educators or content creators of the institution - a content creation and individualization service to integrate the own re:quest into the corporate identity of the institution is offered individually.
-`,
+      title: 'Interactive Editor',
+      description: (
+        <span>
+          With the <b>re:quest</b> studio, museums can create digital escape
+          games thematically oriented to their individual content and locations
+          and make them available to children and young people. Not only virtual
+          puzzles but also real elements such as exhibits or web content from
+          social networks can be included. The digital Escape Games can thus be
+          designed easily freely and interactively. The <b>re:quest</b> studio
+          can be used by exhibition planners, museum educators or content
+          creators of the institution. A content creation and individualization
+          service to integrate one´s own <b>re:quest</b> into the corporate
+          identity of the institution is offered individually.
+        </span>
+      ),
     },
   },
 }
